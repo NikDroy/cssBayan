@@ -11,13 +11,23 @@ body {
     padding: 1rem 1rem;
 }
 .wrapper {
-    margin: 0 auto;
+    /* margin: 0 auto;
     max-width: 500px;
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 2rem;
+     */
+
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2vh 0 2vh;
 }
 .title {
     font-size: 4rem;
@@ -33,6 +43,7 @@ label {
     
 }
 .meme {
+    width: 100%;
     padding-top: 1.5rem;
     cursor: pointer;
     transition: .5s all;
@@ -41,7 +52,7 @@ label {
 .border {
     display: block;
     width: 100%;
-    height: .3rem;
+    height: .2rem;
     background-color: #e0e5e9;
     margin-bottom: 1rem;
     transition: background-color .5s ease-in-out;
@@ -66,19 +77,19 @@ i {
     opacity: 0;
 }
 img {
-
-    height: 25rem;
+    height: 28em;
     width: 100%;
     object-fit: contain;
+    border-radius: 12px;
 }
 .meme__img {
+
     display: block;
     height: 0;
     overflow: hidden;
-    transition: height 1s ease-in-out;
-    margin-bottom: 2em;
-    margin-top: 0.8em;
-    border-radius: 12px;
+    transition: height .5s ease-in-out;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 
@@ -96,19 +107,19 @@ img {
     .meme:hover .border {
         background-color: yellow; 
     }
-    /* .wrapper:hover . */
     .meme:hover i {
         color: yellow; 
         opacity: 1;
         transform: rotate(-90deg);
     }
-    .meme:hover .meme__img {
-        height: 25rem;
-    }
     .wrapper:hover i {
         opacity: 1;
+        color: yellow; 
     }
 
+    .meme:hover .meme__img {
+        height: 30em;
+    }
 }
 
 /* checked */
@@ -125,5 +136,5 @@ input[type="radio"]:checked + .border +.meme-text i {
     transform: rotate(90deg);
 }
 input[id^=meme]:checked~.meme__img {
-    height: 25rem;
+    height: 30em;
 }
